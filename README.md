@@ -6,7 +6,7 @@ $ git config -l # посмотрели имя и адрес
 ```
 
 ## Создание удаленного репозитория 
-1. Заходим в профиль на [github](https://github.com/new "githab!") 
+1. Заходим в профиль на [github](https://github.com/new "github!") 
 2. Создаем новый репозиторий и называем его *Second-project*
 3. Выбираем настройку приватности репозитория *Private*
 4. Нажимаем кнопку *Create repository*
