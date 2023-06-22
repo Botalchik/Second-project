@@ -61,31 +61,34 @@ branch 'master' set up to track 'origin/master'.
 
 ```mermaid
 graph LR;
-node2[untracked] -- "git add" --> node2[staged] ;
-node2[staged] -- "git commit" --> node2[commited];
-node2[tracked] -- "change file" --> node2[modified];
+(untracked) -- "git add" --> (staged) 
+(staged) -- "git commit" --> (commited)
+(tracked) -- "change file" --> (modified)
 ```
 
 ```mermaid
 flowchart LR
-classDef class1 fill:#fff,stroke:#333,stroke-width:2px,color:#ffa500
-classDef class2 fill:#ffa500,stroke:#333,stroke-width:2px,color:#fff
-classDef class3 fill:#000000,stroke:#000000,stroke-width:4px,color:#fff
-classDef class4 fill:#0000ff,stroke:#000000,stroke-width:4px,color:#fff
-A([untracked]):::class4
-B([modified]):::class1
-C([staged]):::class2
-D([tracked]):::class1
+classDef class1 fill:#fff,stroke:#ffa500,stroke-width:2px,color:#fff
+classDef class2 fill:#ffa500,stroke:#333,stroke-width:0px,color:#fff
+classDef class3 fill:#000000,stroke:#000000,stroke-width:0px,color:#fff
+classDef class4 fill:#0000ff,stroke:#000000,stroke-width:0px,color:#000000
+A(untracked):::class4
+B(modified):::class1
+C(staged):::class2
+D(tracked):::class1
 E([git add]):::class3
 F([git commit]):::class3
 G([git add]):::class3
 H([changes]):::class3
-B-->E
+B---E
 E-->C
-C-->F
+C---F
 F-->D
-D-->H
+D---H
 H-->B
+C--"Changes"-->B
+A---G
+G-->C
 ```
 
 ## Подсказки 
