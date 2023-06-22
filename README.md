@@ -72,8 +72,6 @@ classDef class1 fill:#000000,stroke:#000000,stroke-width:0px,color:#fff
 classDef class2 fill:#ffa500,stroke:#000000,stroke-width:1px,color:#000000
 classDef class3 fill:#0000ff,stroke:#000000,stroke-width:0px,color:#000000
 A(untracked):::class1---B([git add]):::class2-->C(staged):::class1
-D(staged):::class1---E([git commit]):::class2-->F(commited):::class1
-G(tracked):::class3---H([change file]):::class2-->I(modified):::class1
 ```
 
 
