@@ -60,10 +60,10 @@ branch 'master' set up to track 'origin/master'.
 ## Статусы в Git
 
 ```mermaid
-graph LR
-(untracked) -- "git add" --> (staged) 
-(staged) -- "git commit" --> (commited)
-(tracked) -- "change file" --> (modified)
+graph LR;
+(untracked) -- "git add" --> (staged);
+(staged) -- "git commit" --> (commited);
+(tracked) -- "change file" --> (modified);
 ```
 
 ```mermaid
@@ -75,9 +75,6 @@ classDef class4 fill:#0000ff,stroke:#000000,stroke-width:0px,color:#000000
 A(untracked):::class4
 C(staged):::class2
 G([git add]):::class3
-A---G
-G-->C
-subgraph
 D(tracked):::class1
 E([git add]):::class3
 F([git commit]):::class3
@@ -90,8 +87,8 @@ C---F
 F-->D
 D---H
 H-->B
-C--"Changes"-->B
-end
+A---G
+G-->C
 ```
 
 ## Подсказки 
