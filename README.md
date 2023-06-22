@@ -38,6 +38,7 @@ $ git status # перед комитом посмотрели информаци
 $ git add . && git commit -m "Create Read me" # добавили информацию об изменениях и закомитили изменения на локальной машине
 $ git push -u origin master # отправка изменений в удаленный репозиторий. В дальнейшем просто git push
 $ git log # смотрим логи коммитов git log --oneline смотрим комментарии к комитам + сокаращенный хеш
+$ git commit -- amend --no-edit # исправить последний коммит
 ```
 
 ## В результате получаем 
@@ -60,45 +61,12 @@ branch 'master' set up to track 'origin/master'.
 ## Статусы в Git
 
 ```mermaid
-graph LR
-A(untracked) -- "git add" --> B(staged)
-C(staged) -- "git commit" --> D(commited)
-E(tracked) -- "change file" --> F(modified)
-```
-
-```mermaid
 flowchart LR
 classDef class1 fill:#000000,stroke:#000000,stroke-width:0px,color:#fff
 classDef class2 fill:#ffa500,stroke:#000000,stroke-width:1px,color:#000000
-classDef class3 fill:#0000ff,stroke:#000000,stroke-width:0px,color:#000000
 A(untracked):::class1---B([git add]):::class2-->C(staged):::class1
 D(staged):::class1---E([git commit]):::class2-->F(commited):::class1
-G(tracked):::class3---H([change file]):::class2-->I(modified):::class1
-```
-
-
-```mermaid
-flowchart LR
-classDef class1 fill:#fff,stroke:#ffa500,stroke-width:2px,color:#fff
-classDef class2 fill:#ffa500,stroke:#333,stroke-width:0px,color:#fff
-classDef class3 fill:#000000,stroke:#000000,stroke-width:0px,color:#fff
-classDef class4 fill:#0000ff,stroke:#000000,stroke-width:0px,color:#000000
-A(untracked):::class4
-C(staged):::class2
-G([git add]):::class3
-D(tracked):::class1
-E([git add]):::class3
-F([git commit]):::class3
-H([changes]):::class3
-B(modified):::class1
-G([git add]):::class3
-B---E
-E-->C
-C---F
-F-->D
-D---H
-H-->B
-A---G
+G(tracked):::class1---H([change file]):::class2-->I(modified):::class1
 ```
 
 ## Подсказки 
