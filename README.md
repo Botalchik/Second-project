@@ -68,6 +68,16 @@ E(tracked) -- "change file" --> F(modified)
 
 ```mermaid
 flowchart LR
+classDef class1 fill:#000000,stroke:#000000,stroke-width:0px,color:#fff
+classDef class2 fill:#0000ff,stroke:#000000,stroke-width:0px,color:#000000
+A(untracked):::class1---B(git add):::class2-->C(staged):::class2
+D(staged) -- "git commit" --> G(commited)
+E(tracked) -- "change file" --> F(modified)
+```
+
+
+```mermaid
+flowchart LR
 classDef class1 fill:#fff,stroke:#ffa500,stroke-width:2px,color:#fff
 classDef class2 fill:#ffa500,stroke:#333,stroke-width:0px,color:#fff
 classDef class3 fill:#000000,stroke:#000000,stroke-width:0px,color:#fff
